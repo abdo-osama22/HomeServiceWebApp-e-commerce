@@ -1,0 +1,131 @@
+﻿@model IEnumerable<ElmonkezApp.Models.Invoice>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<div class="table">
+    <div class="row">
+        <div class="col-9">
+            <h2 class="text-info">Invoices</h2>
+
+        </div>
+        <div class="col-3">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a asp-action="Create" class="btn btn-info"> <i class="uil uil-plus"></i> New Invoices</a>
+
+        </div>
+    </div>
+    <br />
+   
+    <br />
+    @*<p>
+            <a class="add_new" asp-action="Create">+ Add New</a>
+            <a class="add_new" asp-action="Create">+ Add New</a>
+            <a class="add_new" asp-action="Create">+ Add New</a>
+        </p>*@
+
+    <div class="table_section">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PhoneNum)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserEmail)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.InvoiceId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.InvoiceId" class="btn btn-success"><i class="uil uil-list-ul"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.InvoiceId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+
+                </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+@section scripts{
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            }
+
+
+            );
+        });
+
+
+        $(function () {
+            var save = '@TempData["save"]'
+            if (save != '') {
+                alertify.success(save);
+            }
+
+            var edit = '@TempData["edit"]'
+            if (edit != '') {
+                alertify.success(edit);
+            }
+
+            var del = '@TempData["del"]'
+            if (del != '') {
+                alertify.error(del);
+            }
+        })
+
+    </script>
+}
+
+
+
+

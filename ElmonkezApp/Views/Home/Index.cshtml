@@ -1,0 +1,343 @@
+﻿@using ElmonkezApp.Models;
+@using ElmonkezApp.Data
+@model dynamic
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!-- ======= Hero header Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                <h1>Better Experience With Elmonkez</h1>
+                <h2>Rely on trained specialists and technicians to deal with all types of maintenance faults.</h2>
+                <div class="ppp">
+                    <partial name="_LoginPartial" class="btn btn-primary"/>
+                    @*<span class="flou"><a class="btn main_bt" href="#">Sign Up</a></span>
+                    <span class="flou"><a class="btn main_bt" href="#">Log In</a></span>*@
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+
+
+                <img src="~/client/images/worker.png" class="img-fluid animated" alt="">
+
+
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Hero -->
+<!-- End Hero header section -->
+<!-- section about Us -->
+<div class="section padding_layout_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="main_heading text_align_center">
+                        <h2>WE ARE A LEADING COMPANY</h2>
+                        <p class="large">Fastest repair service with the best price!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about_blog">
+            <div class="col-lg-6 col-md-6 col-sm-12 about_cont_blog">
+                <div class="full text_align_left">
+                    <h3>What we do</h3>
+                    <p>
+                        Providing experienced technical labor and providing them with good equipment that enables them to provide high-quality services capable of satisfying customers and thus ensuring them as permanent clients of the project....
+                    </p>
+                    <ul>
+                        <li><i class="fa fa-check-circle"></i>Saving time and effort.</li>
+                        <li><i class="fa fa-check-circle"></i>Good handling of problems facing customers.</li>
+                        <li><i class="fa fa-check-circle"></i>Reply to inquiries and messages.</li>
+                        <li><i class="fa fa-check-circle"></i>Establishing a good relationship between the employee and the customer.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 about_feature_img padding_right_0">
+                <div class="full text_align_center"> <img class="img-responsive" src="~/client/images/it_service/about-img.jpg" alt="#" /> </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 35px">
+
+
+        </div>
+    </div>
+</div>
+<!-- end section about Us -->
+<!-- section Service Process -->
+<div class="section padding_layout_1 light_silver gross_layout">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="main_heading text_align_left">
+                        <h2>Service Process</h2>
+                        <p class="large">An easy and effective way to repair your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="service_blog_inner">
+                                <div class="icon text_align_left"><img src="~/client/images/it_service/si1.png" alt="#" /></div>
+                                <h4 class="service-heading">Fast service</h4>
+                                <p>Responding to inquiries and messages and being able to solve problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="service_blog_inner">
+                                <div class="icon text_align_left"><img src="~/client/images/it_service/si2.png" alt="#" /></div>
+                                <h4 class="service-heading">Secure payments</h4>
+                                <p>Providing a safe, good and efficient electronic payment service that can be easily dealt with.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="service_blog_inner">
+                                <div class="icon text_align_left"><img src="~/client/images/it_service/si3.png" alt="#" /></div>
+                                <h4 class="service-heading">Expert team</h4>
+                                <p>It contains an organized work team and has a quick response and problem solving response.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="service_blog_inner">
+                                <div class="icon text_align_left"><img src="~/client/images/it_service/si4.png" alt="#" /></div>
+                                <h4 class="service-heading">Affordable services</h4>
+                                <p>We are distinguished by fantastic prices with our service offers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="service_blog_inner">
+                                <div class="icon text_align_left"><img src="~/client/images/it_service/si5.png" alt="#" /></div>
+                                <h4 class="service-heading">Quality assurance</h4>
+                                <p>We provide customers with confidence with a quality service guarantee.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="full">
+                            <div class="service_blog_inner">
+                                <div class="icon text_align_left"><img src="~/client/images/it_service/si6.png" alt="#" /></div>
+                                <h4 class="service-heading">Award winning</h4>
+                                <p>Number one in our field with the testimony of our clients in home maintenance services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section Service Process -->
+<!-- section Category -->
+<div class="section padding_layout_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="main_heading text_align_center">
+                        <h2>Category</h2>
+                        <p class="large">Fastest repair service with the best price!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="services" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+
+
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="row gy-4">
+                            @foreach (Category Cate in Model.CategoryList)
+                            {
+
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="icon-box iconbox-blue">
+                                        <div class="icon">
+                                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                                            </svg>
+                                            <i class="@Cate.Image"></i>
+                                        </div>
+                                        <h4><a asp-route-id="@Cate.CategoryId" asp-action="Service" asp-controller="Home">@Cate.CategoryName</a></h4>
+                                        <p>@Cate.Description</p>
+                                    </div>
+                                </div>
+
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- end section Category -->
+<!-- section Review -->
+<div class="section padding_layout_1 testmonial_section white_fonts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="main_heading text_align_left">
+                        <h2 style="text-transform: none;">What Clients Say?</h2>
+                        <p class="large">Here are testimonials from clients..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="full">
+                    <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonial_slider" data-slide-to="1"></li>
+                            <li data-target="#testimonial_slider" data-slide-to="2"></li>
+                        </ul>
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-container">
+                                    <div class="testimonial-content">
+                                        You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first.
+                                        I am really satisfied with my first laptop service.
+                                    </div>
+                                    <div class="testimonial-photo"> <img src="~/client/images/it_service/team-member-1.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
+                                    <div class="testimonial-meta">
+                                        <h4>Maria Anderson</h4>
+                                        <span class="testimonial-position">CFO, Tech NY</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="testimonial-container">
+                                    <div class="testimonial-content">
+                                        You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first.
+                                        I am really satisfied with my first laptop service.
+                                    </div>
+                                    <div class="testimonial-photo"> <img src="~/client/images/it_service/team-member-2.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
+                                    <div class="testimonial-meta">
+                                        <h4>Maria Anderson</h4>
+                                        <span class="testimonial-position">CFO, Tech NY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-container">
+                                    <div class="testimonial-content">
+                                        You guys rock! Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first.
+                                        I am really satisfied with my first laptop service.
+                                    </div>
+                                    <div class="testimonial-photo"> <img src="~/client/images/it_service/team-member-3.jpg" class="img-responsive" alt="#" width="150" height="150"> </div>
+                                    <div class="testimonial-meta">
+                                        <h4>Maria Anderson</h4>
+                                        <span class="testimonial-position">CFO, Tech NY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="full"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section Review -->
+<!-- section -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="contact_us_section">
+                        <div class="call_icon"> <img src="~/client/images/it_service/phone_icon.png" alt="#" /> </div>
+                        <div class="inner_cont">
+                            <h2>REQUEST A FREE QUOTE</h2>
+                            <p>Get answers and advice from people you want it from.</p>
+                        </div>
+                        <div class="button_Section_cont"> <a class="btn dark_gray_bt" asp-area="" asp-controller="Home" asp-action="Contact">Contact us</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- section -->
+<div class="section padding_layout_1" style="padding: 50px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end section -->
+<!-- Modal -->
+<div class="modal fade" id="search_bar" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
+                        <div class="navbar-search">
+                            <form action="#" method="get" id="search-global-form" class="search-global">
+                                <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value="" class="search-global__input">
+                                <button class="search-global__btn"><i class="fa fa-search"></i></button>
+                                <div class="search-global__note">Begin typing your search above and press return to search.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Model search bar -->
+@*@foreach (Review rev in Model.ReviewList)
+    {
+        <div class="testimonial-container">
+            <div class="testimonial-content">
+                @rev.Message
+            </div>
+            <div class="testimonial-photo"> <img src="~/client/images/it_service/@rev.Image" class="img-responsive" alt="#" width="150" height="150"> </div>
+            <div class="testimonial-meta">
+                <h4>@rev.Name</h4>
+                <span class="testimonial-position">@rev.Subject</span>
+            </div>
+        </div>
+    }*@

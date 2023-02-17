@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ElmonkezApp.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+<div class="table">
+    <div class="row">
+        <div class="col-9">
+            <h2 class="text-info">Employees</h2>
+
+        </div>
+        <div class="col-3">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a asp-action="Create" class="btn btn-info"> <i class="uil uil-plus"></i> New Employee</a>
+
+        </div>
+    </div>
+    <br />
+    @*<p>
+            <a class="add_new" asp-action="Create">+ Add New</a>
+            <a class="add_new" asp-action="Create">+ Add New</a>
+            <a class="add_new" asp-action="Create">+ Add New</a>
+        </p>*@
+
+    <div class="table_section">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Job)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Image)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Job)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.EmployeeId" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.EmployeeId" class="btn btn-success"><i class="uil uil-list-ul"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.EmployeeId" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+@section scripts{
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var save = '@TempData["save"]'
+            if (save != '') {
+                alertify.success(save);
+            }
+
+            var edit = '@TempData["edit"]'
+            if (edit != '') {
+                alertify.success(edit);
+            }
+
+            var del = '@TempData["del"]'
+            if (del != '') {
+                alertify.error(del);
+            }
+        })
+
+    </script>
+}
+
+
+
+
